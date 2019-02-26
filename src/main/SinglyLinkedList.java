@@ -22,7 +22,13 @@ public class SinglyLinkedList {
                 n = n.next;
             }
         }
+        public void push(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next=head;
+            head=newNode;
 
+        }
 
         public static void main(String[] args) {
             SinglyLinkedList l = new SinglyLinkedList();
@@ -31,6 +37,8 @@ public class SinglyLinkedList {
             Node third = new Node(3);
             l.head.next = second;
             second.next = third;
+            l.push(5);
+            l.push(10);
             l.display();
         }
     }
